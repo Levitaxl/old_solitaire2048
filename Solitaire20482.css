@@ -1,0 +1,163 @@
+*{
+	box-sizing: border-box;
+}
+
+body{
+	margin:0;
+	background: black;
+}
+
+.game-container{
+	display: grid;
+	justify-content: center;
+}
+
+.columns{
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  justify-content: center;
+  background-color: #4B0082;
+  width: 400px;
+  height: 640px;
+}
+
+.card{
+  position: relative;
+  height: 150px;
+  width: 100px;
+  margin-bottom: -87px;
+}
+
+.game-cards-to-play{
+	display: inline-flex;
+	position: relative;
+	justify-content: center;
+	background-color:#061826;
+	width: 400px;
+	height: 160px;
+}
+
+.undo{
+  position: relative;
+  background: #8B0000;
+  height: 55px;
+  width: 100px;
+  margin-left:-40px;
+  margin-right: 10px;
+  top:100px;
+  
+}
+
+
+.hand{
+  display: grid;
+  position: relative;
+  grid-template-columns: repeat(2, auto);
+  height: 150px;
+  width: 140px;
+  bottom: -10px;
+}
+
+.card-hand-0{
+  position: relative;
+  height: 150px;
+  width: 100px;
+}
+
+.card-hand-1{
+  position: relative;
+  height: 150px;
+  width: 100px;
+  left: -60px;
+}
+
+.joker{
+	display: grid;
+	position: relative;
+	grid-template-columns: repeat(1, auto);
+ 	justify-content: center;
+	height: 150px;
+  width: 100px;
+  left:45px;
+}
+
+.joker1{
+	position: relative;
+	height: 75px;
+  width: 100px;
+  margin-bottom: 8px;
+}
+
+.joker2{
+	position: relative;
+	height: 75px;
+  width: 100px;
+}
+
+.game-info-container{
+  display: inline-flex;
+  position: relative;
+  justify-content: center;
+  background-color: white;
+  width: 400px;
+  height: 30px;
+}
+
+.score{
+	position: relative;
+	background-color:#00008B;
+	width: 200px;
+  height: 30px;
+  font-size: 1.3em;
+  text-align: center;
+  border-style: solid;
+ 	border-width: 2px;
+	color:white;
+}
+
+.number-of-2048{
+	position: relative;
+	background: blue;
+	width: 200px;
+  height: 30px;
+  font-size: 1.3em;
+  text-align: center;
+  border-style: solid;
+ 	border-width: 2px;
+ 	color:white;
+ 	background-color:#00008B;
+}
+
+
+.overlay-text{
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  display: none;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+
+.overlay-text.visible{
+  display: flex;
+  flex-direction: column;/*BUSCAR*/
+  animation: overlay-grow 500ms forwards;/*BUSCAR*/
+}
+
+@keyframes overlay-grow{
+  from{
+    background-color: rgba(0,0,0,0);
+    font-size: 0em;
+  }
+
+  to{
+    background-color: rgba(0,0,0,.8);
+    font-size: 10em;
+  }
+}
+
